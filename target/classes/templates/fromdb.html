@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Tweets from Mongo DB</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+   <h4>Tweets from mongo db</h4>
+   count: <span th:text="${count}"></span>
+    <ul>
+       <li th:each="item : ${tweets}">
+       <span>@<b th:text="${item.user}"></b></span>
+       <span th:text="${item.text}"></span>
+       <span th:text="${item.createdAt}"></span>
+       </li>
+    </ul>
+</body>
+</html>

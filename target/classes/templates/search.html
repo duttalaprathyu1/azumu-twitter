@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Search tweets</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p  th:if="${q}" th:text="'Searched for: ' + ${q} + '!'" />
+    <ul>
+       <li th:each="item : ${tweets}" th:text="${item}"></li>
+    </ul>
+     <p><a href="/tweets-from-db">Get tweets stored in mongodb</a></p>
+</body>
+</html>
